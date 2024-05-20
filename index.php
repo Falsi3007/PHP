@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
+    <title>PHP TUTORIAL</title>
 </head>
 <body>
     <?php
     //variable
-    $txt = "MS Dhoni";
-    echo "I love $txt!";  
+    // $txt = "MS Dhoni";
+    // echo "I love $txt!";  
    
-    $x = 5;
-    $y = 4;
-    echo $x + $y;
+    // $x = 5;
+    // $y = 4;
+    // echo $x + $y;
 
-    //Assign multiple var
-    $x = $y = $z = "Fruit";
-    echo $x;
-    echo $y;
-    echo $z;
+    // //Assign multiple var
+    // $x = $y = $z = "Fruit";
+    // echo $x;
+    // echo $y;
+    // echo $z;
 
 
 //-----------------------------------------------------------------------------
@@ -38,38 +38,38 @@
 //-----------------------------------------------------------------------------
 
     //The var_dump() function returns the data type and the value:
-    var_dump(5);
-    var_dump("John");
-    var_dump(3.14);
-    var_dump(true);
-    var_dump([2, 3, 56]);
-    var_dump(NULL);
+    // var_dump(5);
+    // var_dump("John");
+    // var_dump(3.14);
+    // var_dump(true);
+    // var_dump([2, 3, 56]);
+    // var_dump(NULL);
 
 
 //-----------------------------------------------------------------------------
 
     //variable scope
     //1.global
-        $x = 5; // global scope
+    //     $x = 5; // global scope
     
-    function myTest() {
-    // using x inside this function will generate an error
-    echo "<p>Variable x inside function is: $x</p>";
-    } 
-    myTest();
+    // function myTest() {
+    // // using x inside this function will generate an error
+    // echo "<p>Variable x inside function is: $x</p>";
+    // } 
+    // myTest();
 
-    echo "<p>Variable x outside function is: $x</p>";
+    // echo "<p>Variable x outside function is: $x</p>";
 
 
-    //2.local
-    function myTest() {
-        $x = 5; // local scope
-        echo "<p>Variable x inside function is: $x</p>";
-      } 
-      myTest();
+    // //2.local
+    // function myTest() {
+    //     $x = 5; // local scope
+    //     echo "<p>Variable x inside function is: $x</p>";
+    //   } 
+    //   myTest();
       
-      // using x outside the function will generate an error
-      echo "<p>Variable x outside function is: $x</p>";
+    //   // using x outside the function will generate an error
+    //   echo "<p>Variable x outside function is: $x</p>";
 
 
 //-----------------------------------------------------------------------------
@@ -169,33 +169,95 @@
     // -------------------------------------------------------------------------------------
     
     // Strings :  
-    $x = "John Abraham";
-    echo 'Hello $x <br>';
-    echo "Hello $x <br>";
+    // $x = "John Abraham";
+    // echo 'Hello $x <br>';
+    // echo "Hello $x <br>";
 
-    echo strlen($x);
+    // echo strlen($x);
+    // echo "<br>";
+    // echo str_word_count($x);
+    // echo "<br>";
+    // echo strpos("Hello world!", "world");//Search for the text "world" in the string "Hello world!" and returns starting index - 1
+    // echo "<br>";
+    // echo strtoupper($x);
+    // echo "<br>";
+    // echo strtolower($x);
+    // echo "<br>";
+    // echo str_replace("Abraham", "Dolly", $x);
+    // echo "<br>";
+    // echo strrev($x);
+    // echo "<br>";
+    // echo trim($x);//The trim() removes any whitespace from the beginning or the end
+    // echo "<br>";
+    // $y = explode(" ", $x);//Split the string into an array. Use the space character as separator
+    // print_r($y);//Use the print_r() function to display the result
+    // echo "<br>";
+    // echo substr($x, 5, 7);//starts with 5th index and take 7 chars from there
+    // echo "<br>";
+    // $x = "We are the so-called \"Vikings\" from the north.";
+    // echo($x);
+
+    //concate the string
+    // $x = "Hello";
+    // $y = "World";
+    // $z = $x . $y;
+    // echo $z;
+
+    //how to add space between to words
+    //$x = "Hello";
+    // $y = "World";
+    // $z = $x . " " . $y;
+    // echo $z;
+
+    // $x = "Hello";
+    // $y = "World";
+    // $z = "$x $y";
+    // echo $z;
+
+
+//---------------------------------------------------------------------------------------------
+
+    //Numbers:
+    // PHP has the following predefined constants for integers:
+    //     PHP_INT_MAX - The largest integer supported
+    //     PHP_INT_MIN - The smallest integer supported
+    //     PHP_INT_SIZE -  The size of an integer in bytes
+
+    $x = 5985;
+    var_dump(is_int($x));
     echo "<br>";
-    echo str_word_count($x);
+    // Check again... 
+    $x = 59.85;
+    var_dump(is_int($x));
+
+
+    // PHP has the following predefined constants for floats (from PHP 7.2):
+    //     PHP_FLOAT_MAX - The largest representable floating point number
+    //     PHP_FLOAT_MIN - The smallest representable positive floating point number
+    //     PHP_FLOAT_DIG - The number of decimal digits that can be rounded into a float and back without precision loss
+    //     PHP_FLOAT_EPSILON - The smallest representable positive number x, so that x + 1.0 != 1.0
+    //     PHP has the following functions to check if the type of a variable is float:
+
+    $x = 1.9e411;
+    var_dump($x);
+    //invalid calculation return NaN
+    $x = acos(8);
+    var_dump($x);
+
+    
+    $x = "59.85" + 100;
+    var_dump(is_numeric($x));
+
     echo "<br>";
-    echo strpos("Hello world!", "world");//Search for the text "world" in the string "Hello world!" and returns starting index - 1
-    echo "<br>";
-    echo strtoupper($x);
-    echo "<br>";
-    echo strtolower($x);
-    echo "<br>";
-    echo str_replace("Abraham", "Dolly", $x);
-    echo "<br>";
-    echo strrev($x);
-    echo "<br>";
-    echo trim($x);//The trim() removes any whitespace from the beginning or the end
-    echo "<br>";
-    $y = explode(" ", $x);//Split the string into an array. Use the space character as separator
-    print_r($y);//Use the print_r() function to display the result
-    echo "<br>";
-    echo substr($x, 5, 7);//starts with 5th index and take 7 chars from there
-    echo "<br>";
-    $x = "We are the so-called \"Vikings\" from the north.";
-    echo($x);
+
+    $x = "Hello";
+    var_dump(is_numeric($x));
+
+
+    // Cast float to int , also we can change string to int
+    $x = 23465.768;
+    $int_cast = (int)$x;
+    echo $int_cast;
 
     ?>
 </body>
