@@ -76,20 +76,33 @@
 //--------------------------------------------------------------------------------
 
     //constants
-    define(name, value, case-insensitive);  //syntax : case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false. Note: Defining case-insensitive constants was deprecated in PHP 7.3. PHP 8.0 accepts only false, the value true will produce a warning.
+    // define(name, value, case-insensitive);  //syntax : case-insensitive: Specifies whether the constant name should be case-insensitive. Default is false. Note: Defining case-insensitive constants was deprecated in PHP 7.3. PHP 8.0 accepts only false, the value true will produce a warning.
 
-    define("GREETING", "Welcome to falsi.com!");   //case sensitive
-    echo GREETING;
+    // define("GREETING", "Welcome to falsi.com!");   //case sensitive
+    // echo GREETING;
 
-    define("GREETING", "Welcome to W3Schools.com!", true);   //case insensitive
-    echo greeting;
+    // define("GREETING", "Welcome to W3Schools.com!", true);   //case insensitive
+    // echo greeting;
 
-    define("cars", [
-        "Alfa Romeo",
-        "BMW",
-        "Toyota"
-      ]);
-      echo cars[0];
+    // define("cars", [
+    //     "Alfa Romeo",
+    //     "BMW",
+    //     "Toyota"
+    //   ]);
+    //   echo cars[0];
+
+
+    //Operators are used to perform operations on variables and values.
+
+    // PHP divides the operators in the following groups:
+    // Arithmetic operators
+    // Assignment operators
+    // Comparison operators
+    // Increment/Decrement operators
+    // Logical operators
+    // String operators
+    // Array operators
+    // Conditional assignment operators
 
     ?>
 </body>
