@@ -223,12 +223,12 @@
     //     PHP_INT_MIN - The smallest integer supported
     //     PHP_INT_SIZE -  The size of an integer in bytes
 
-    $x = 5985;
-    var_dump(is_int($x));
-    echo "<br>";
-    // Check again... 
-    $x = 59.85;
-    var_dump(is_int($x));
+    // $x = 5985;
+    // var_dump(is_int($x));
+    // echo "<br>";
+    // // Check again... 
+    // $x = 59.85;
+    // var_dump(is_int($x));
 
 
     // PHP has the following predefined constants for floats (from PHP 7.2):
@@ -238,26 +238,26 @@
     //     PHP_FLOAT_EPSILON - The smallest representable positive number x, so that x + 1.0 != 1.0
     //     PHP has the following functions to check if the type of a variable is float:
 
-    $x = 1.9e411;
-    var_dump($x);
+    // $x = 1.9e411;
+    // var_dump($x);
     //invalid calculation return NaN
-    $x = acos(8);
-    var_dump($x);
+    // $x = acos(8);
+    // var_dump($x);
 
     
-    $x = "59.85" + 100;
-    var_dump(is_numeric($x));
+    // $x = "59.85" + 100;
+    // var_dump(is_numeric($x));
 
-    echo "<br>";
+    // echo "<br>";
 
-    $x = "Hello";
-    var_dump(is_numeric($x));
+    // $x = "Hello";
+    // var_dump(is_numeric($x));
 
 
-    // Cast float to int , also we can change string to int
-    $x = 23465.768;
-    $int_cast = (int)$x;
-    echo $int_cast;
+    // // Cast float to int , also we can change string to int
+    // $x = 23465.768;
+    // $int_cast = (int)$x;
+    // echo $int_cast;
 
     ?>
 </body>
