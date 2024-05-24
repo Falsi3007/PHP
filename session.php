@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    <?php
+    <?php                                    
     echo"fav color is" .$_SESSION["favcolor"].".<br>";
     echo"fav animal is" .$_SESSION["favanimal"].".";
     ?>
