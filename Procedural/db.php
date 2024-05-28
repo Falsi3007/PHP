@@ -8,7 +8,6 @@ $username = "root";
 $password = "";
 $conn="";
 
-
 try{
 $conn = mysqli_connect($servername, 
                         $username, 
